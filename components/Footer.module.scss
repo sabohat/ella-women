@@ -1,0 +1,121 @@
+// Footer start
+.footer {
+  width: 100%;
+  background: #7165e5;
+  box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.08);
+}
+.footer__container {
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 48px 0;
+  gap: 24px;
+}
+.footer__top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 48px;
+}
+.footer__top__info {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+.footer__logo,
+.footer__ul li,
+.footer__social__group svg,
+.footer__download__group svg {
+  cursor: pointer;
+}
+.footer__ul {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
+}
+.footer__ul li {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: -0.41px;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+.footer__ul li:hover {
+  color: #84919a;
+}
+.footer__download__group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.footer__bottom {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer__title {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: -0.41px;
+  color: #ffffff;
+}
+.footer__social__group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.footer__social__group svg {
+  transition: transform 0.3s linear;
+}
+.footer__social__group svg:hover {
+  transform: translateY(-10px);
+}
+
+// media styles for footer
+@media (max-width: 1400px) {
+  .footer__container {
+    max-width: 90%;
+  }
+}
+@media (max-width: 1200px) {
+  .footer__top,
+  .footer__bottom {
+    flex-direction: column;
+  }
+  .footer__top {
+    padding-bottom: 0;
+    gap: 20px;
+  }
+}
+@media (max-width: 800px) {
+  .footer__top__info {
+    flex-direction: column;
+  }
+}
+@media (max-width: 500px) {
+  .footer__top,
+  .footer__top__info {
+    justify-content: center !important;
+    align-content: center;
+  }
+  .footer__logo{
+    align-self:flex-end;
+  }
+  .footer__download__group {
+    flex-direction: column;
+  }
+  .footer__ul {
+    flex-direction: column;
+  }
+  .footer__download__group svg:first-child {
+    order: 1;
+  }
+}
