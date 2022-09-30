@@ -4,6 +4,28 @@ import Link from 'next/link'
 import styles from './Header.module.scss'
 import { LogoIcon } from './svg'
 
+const headerLinks = [
+    {
+        link: "/articles",
+        label: "Articles",
+        id: 0
+    },
+    {
+        link: "/product",
+        label: "Mahsulotlar",
+        id: 1
+    },
+    {
+        link: "/calculators",
+        label: "Kalkulyatorlar",
+        id: 2
+    },
+    {
+        link: "/about-us",
+        label: "Biz haqimizda",
+        id: 3
+    }
+]
 export default function Header() {
     return (
         <div className={styles.header}>
@@ -11,12 +33,10 @@ export default function Header() {
                 <LogoIcon />
             </div>
             <ul className={styles.list}>
-                <li className={styles.link}><Link href="/articles">Maqolalar</Link> </li>
-                <li className={styles.link}><Link href="/product">Mahsulotlar</Link></li>
-                <li className={styles.link}><Link href="/calculators">Kalkulyatorlar</Link></li>
-                <li className={`${styles.link} ${styles.active}`}><Link href="/about-us">Biz Haqimizda</Link></li>
+                {headerLinks.map((item) => (
+                    <li key={item.id} className={styles.link}><Link href={item.link}>{item.label}</Link></li>
+                ))}
             </ul>
-
         </div>
     )
 }
