@@ -40,8 +40,10 @@
         display: flex;
         gap: 16px;
         svg{
-            transition: 0.3s ease-in-out;
+            transition: 0.5s ease-in-out;
             &:hover{
+                transform: translateY(-8px);
+                transition: 0.5s ease-in-out;
                 stroke: #7165e5;
                 path{
                     fill: white;
@@ -51,6 +53,7 @@
         }
     }
 }
+
 
 .list {
     display: flex;

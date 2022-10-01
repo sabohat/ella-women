@@ -70,9 +70,9 @@ export default function Footer() {
           © Ladycare- 2022 All rights reserved
         </p>
         <div className={styles.footer__icons}>
-          <InstagramLogo />
-          <FacebookLogo />
-          <TelegramLogo />
+          <a href="https://www.instagram.com/" target="_blank" rel="noreferrer"><InstagramLogo /></a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noreferrer"><FacebookLogo /></a>
+          <a href="https://web.telegram.org/k/" target="_blank" rel="noreferrer"><TelegramLogo /></a>
         </div>
       </div>
       {/* </div> */}
