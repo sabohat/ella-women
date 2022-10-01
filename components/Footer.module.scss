@@ -1,0 +1,51 @@
+.spaceBetCenter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.footer {
+  padding: 48px 135px;
+  background: #7165e5;
+  color: white;
+  .topRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 48px;
+
+    .list {
+      display: flex;
+      list-style-type: none;
+
+      .link {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        padding: 24px;
+        letter-spacing: 0.4099999964237213px;
+        text-align: left;
+      }
+    }
+  }
+
+  .bottomRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p {
+      font-family: "Montserrat";
+      font-size: 17px;
+      font-weight: 500;
+      line-height: 22px;
+      letter-spacing: 0.4099999964237213px;
+    }
+  }
+}
