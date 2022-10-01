@@ -29,3 +29,22 @@
     list-style-type: none;
     padding-left: 36px;
 }
+
+&__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+&__text {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: -0.41px;
+    color: #ffffff;
+}
+&__icons{
+    display: flex;
+    gap: 16px;
+}
