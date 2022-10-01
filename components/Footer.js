@@ -3,8 +3,8 @@ import { InstagramLogo, TelegramLogo, FacebookLogo } from './svg'
 
 export default function Footer() {
     return (
-        <div>
+        <footer>
             I am footer, style me!
-        </div>
+        </footer>
     )
 }
