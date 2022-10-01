@@ -1,0 +1,31 @@
+.footer {
+    padding: 48px 135px;
+    background-color: #7165e5;
+    &__top {
+        margin-bottom: 24px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__nav_wrapper {
+        display: flex;
+        align-items: center;
+    }
+    &__link {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: -0.41px;
+        color: #ffffff;
+        &:not(:last-child) {
+            margin-right: 24px;
+        }
+    }
+}
+
+.list {
+    display: flex;
+    list-style-type: none;
+    padding-left: 36px;
+}
