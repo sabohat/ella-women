@@ -43,6 +43,14 @@ export default function Footer() {
                     <GooglePlayDownloadIcon />
                 </div>
             </div>
+            <div className={styles.row2}>
+                            <div className={styles.text}>© Ladycare- 2022 All rights reserved</div>
+                            <div className={styles.icons}>
+                                <FacebookLogo />
+                                <InstagramLogo />
+                                <TelegramLogo />
+                            </div>
+            </div>
         </div>
     )
 }

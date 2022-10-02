@@ -1,41 +1,59 @@
 .footer {
-    width: 100%;
-    background-color: #7165E5;   
-    padding: 48px 135px;
-}  
-.row1 {
-    width: 100%;
-    display: flex;
-    align-items: center;    
-    justify-content: space-between;
-    .links {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;    
-    
-    }
+  width: 100%;
+  background-color: #7165e5;
+  padding: 48px 135px;
 }
-  .list {
+.row1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .links {
     display: flex;
-    gap: 24px;
-    list-style-type: none;
-  
-    .link {
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 17px;
-        line-height: 22px;
-        font-size: 18px;
-        color: white;
-    }
-  
-    .active {
-      color: #08080a;
-    }
+    justify-content: space-between;
+    align-items: center;
   }
-  
+}
+.list {
+  display: flex;
+  gap: 24px;
+  list-style-type: none;
+
+  .link {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 22px;
+    font-size: 18px;
+    color: white;
+  }
+
+  .active {
+    color: #08080a;
+  }
+}
+
 .download_link {
+  display: flex;
+  gap: 16px;
+}
+.row2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 72px;
+  .text {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: -0.41px;
+    color: #ffffff;  
+  }
+  .icons {
     display: flex;
     gap: 16px;
+  }
 }
