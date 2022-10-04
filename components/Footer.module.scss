@@ -1,0 +1,64 @@
+.footer {
+    padding: 48px 135px;
+    background-color: #7165e5;
+    &__top {
+        margin-bottom: 24px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__nav_wrapper {
+        display: flex;
+        align-items: center;
+    }
+    &__link {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: -0.41px;
+        color: #ffffff;
+        &:not(:last-child) {
+            margin-right: 24px;
+        }
+    }
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__text {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 22px;
+        letter-spacing: -0.41px;
+        color: #ffffff;
+    }
+    &__icons{
+        display: flex;
+        gap: 16px;
+        svg{
+            transition: 0.5s ease-in-out;
+            &:hover{
+                transform: translateY(-8px);
+                transition: 0.5s ease-in-out;
+                stroke: #7165e5;
+                path{
+                    fill: white;
+                }
+                // opacity: 0.7;
+            }
+        }
+    }
+}
+
+
+.list {
+    display: flex;
+    list-style-type: none;
+    padding-left: 36px;
+}
+
+
