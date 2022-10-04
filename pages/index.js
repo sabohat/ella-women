@@ -9,7 +9,7 @@ import styles from '../styles/Home.module.css'
 export default function Home() {
   return (
     <>
-      {/* <AboutUsHero /> */}
+      <AboutUsHero />
       <div className={styles.container}>
         <Head>
           <title>My Ella</title>
