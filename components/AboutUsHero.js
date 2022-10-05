@@ -7,9 +7,9 @@ export default function AboutUsHero() {
     <div className={styles.hero}>
       <div className={styles.heroContainer}>
         <div className={styles.heroLeft}>
-          <h1>Номер один Приложение для отслеживания месячных и циклов</h1>
-          <p>Lorem ipsum doro sitamet</p>
-          <a href="#">
+          <h1 className={styles.heroLeftTitle}>Номер один Приложение для отслеживания месячных и циклов</h1>
+          <p className={styles.heroLeftText}>Lorem ipsum doro sitamet</p>
+          <a className={styles.heroAppStoreIcon} href="#">
             <AppStoreDownloadIcon />
           </a>
           <a href="#">

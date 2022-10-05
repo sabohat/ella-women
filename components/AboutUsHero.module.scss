@@ -2,8 +2,35 @@
   background: linear-gradient(102.18deg, #ffffff 2.59%, #8f84f9 100.42%);
 }
 
-.heroContainer{
+.heroContainer {
   width: 1170px;
   margin: 0 auto;
   padding: 15px;
+}
+
+.heroAppStoreIcon {
+  margin-right: 16px;
+}
+
+.heroLeftTitle {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 57px;
+  letter-spacing: 0.374px;
+  color: #000000;
+  max-width: 607px;
+  margin: 0 0 24px 0;
+}
+
+.heroLeftText {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: 0.35px;
+  color: #141414;
+  margin: 0 0 48px 0;
 }
