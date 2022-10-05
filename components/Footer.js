@@ -42,7 +42,7 @@ export default function Footer() {
         <div className={styles.footer}>
         
         <div className={styles.footerTop}>
-               <a href="/">
+               <a href="#">
                 <FooterLogo/>    
                 </a>
             <ul className={styles.footerList}>
