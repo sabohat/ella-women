@@ -78,19 +78,19 @@ export default function Footer() {
             </p>
             <ul className={styles.socialsWrapper}>
               <li className={styles.listItem}>
-                <a href="/">
+                <Link href="/">
                   <InstagramLogo />
-                </a>
+                </Link>
               </li>
               <li className={styles.listItem}>
-                <a href="/">
+                <Link href="/">
                   <FacebookLogo />
-                </a>
+                </Link>
               </li>
               <li className={styles.listItem}>
-                <a href="/">
+                <Link href="/">
                   <TelegramLogo />
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
