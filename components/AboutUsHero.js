@@ -4,8 +4,8 @@ import styles from './AboutUsHero.module.scss'
 
 export default function AboutUsHero() {
     return (
-        <div className='container'>
-            AboutUsHero
+        <div className={styles.hero}>
+            <div></div>
         </div>
     )
 }
