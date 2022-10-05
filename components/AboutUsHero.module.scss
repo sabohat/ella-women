@@ -1,5 +1,6 @@
 .hero {
   background: linear-gradient(102.18deg, #ffffff 2.59%, #8f84f9 100.42%);
+  padding: 30px 0 65px;
 }
 
 .heroContainer {
@@ -7,6 +8,7 @@
   margin: 0 auto;
   padding: 15px;
   display: flex;
+  align-items: center;
 }
 
 .heroAppStoreIcon {
@@ -34,4 +36,24 @@
   letter-spacing: 0.35px;
   color: #141414;
   margin: 0 0 48px 0;
+}
+
+.heroRight{
+  margin-left: 120px;
+}
+
+.layerWrapper{
+  position: relative;
+}
+
+.layerTwo{
+  position: absolute;
+  top: 128px;
+  left: -114px;
+}
+
+.layerThree{
+  position: absolute;
+  top: 26px;
+  right: -124px;
 }

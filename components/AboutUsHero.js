@@ -21,8 +21,8 @@ export default function AboutUsHero() {
         <div className={styles.heroRight}>
         <div className={styles.layerWrapper}>
         <img className={styles.layerOne} src="/layer3.png" alt="layer3" width="300" height="490"/>
-         <img className={styles.layerTwo} src="/layer2.png" alt="layer2" width="250" height="200" />
-         <img className={styles.layerThree} src="/layer1.png" alt="layer1"/>
+         <img className={styles.layerTwo} src="/layer2.png" alt="layer2" width="250" height="300" />
+         <img className={styles.layerThree} src="/layer1.png" alt="layer1" width="250" height="278"/>
         </div>
         </div>
       </div>
