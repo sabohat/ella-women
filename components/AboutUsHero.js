@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./AboutUsHero.module.scss";
 import { AppStoreDownloadIcon, GooglePlayDownloadIcon } from "./svg";
+// import layer3 from '../public/images/layer3.png'
+// ../../assets/images/layer3.png
 
 export default function AboutUsHero() {
   return (
@@ -15,6 +17,13 @@ export default function AboutUsHero() {
           <a href="#">
             <GooglePlayDownloadIcon />
           </a>
+        </div>
+        <div className={styles.heroRight}>
+        <div className={styles.layerWrapper}>
+        <img className={styles.layerOne} src="/layer3.png" alt="layer3" width="300" height="490"/>
+         <img className={styles.layerTwo} src="/layer2.png" alt="layer2" width="250" height="200" />
+         <img className={styles.layerThree} src="/layer1.png" alt="layer1"/>
+        </div>
         </div>
       </div>
     </div>
