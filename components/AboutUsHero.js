@@ -18,7 +18,6 @@ export default function AboutUsHero() {
                         <a href="https://www.apple.com/uz/app-store/" className={styles.icon}><AppStoreDownloadIcon /></a>
                         <a href="https://www.google.com/"><GooglePlayDownloadIcon /></a>
                     </div>
-
                     <div className={styles.heroRight}>
                         <div className={styles.heroWrapper}>
                             <div className={styles.heroPhone}>

@@ -1,0 +1,48 @@
+.cardList {
+  display: flex;
+}
+
+.card {
+  padding: 32px;
+
+  width: 330px;
+  height: 296px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: rgba(108, 108, 255, 0.04);
+  border-radius: 24px;
+}
+
+.cardText {
+  width: 240px;
+}
+
+.cardTitle {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0 0 20px;
+}
+
+.cardSubtitle {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+
+  /* samolet/textgrey */
+  color: #969dad;
+}
+
+.cardIcon {
+  width: 100%;
+
+  display: flex;
+  justify-content: end;
+}
