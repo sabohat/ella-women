@@ -1,3 +1,79 @@
-.container {
+.hero {
   background: linear-gradient(102.18deg, #ffffff 2.59%, #8f84f9 100.42%);
+  width: 100%;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.06);
+}
+.container {
+  padding-left:135px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.heroLeft{
+  padding:154px 0 161px 0;
+}
+
+.heroTitle{
+  font-family: SF Pro Display;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 57px;
+  letter-spacing: 0.37px;
+  width: 607px;
+  color:#000;
+  margin-bottom: 24px;
+
+}
+
+.heroText{
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: 0.35px;
+  color: #141414;
+  margin-bottom:48px;
+
+}
+
+.icon{
+  margin-right: 16px;
+}
+
+.heroRight{
+  position: relative;
+
+}
+.heroWrapper{
+    padding:97px 94px 57px 52px;
+}
+.heroPhone{
+  position: relative;
+  display: inline-block;
+  top:10px;
+  z-index: 2;
+}
+.image1{
+  position: absolute;
+  display: block;
+  top:50px;
+}
+
+.heroImage{
+  position: absolute;
+  display: inline-block;
+  top:139px;
+  left:228px;
+  z-index: 5;
+}
+
+.heroimg{
+  position: absolute;
+  display: inline-block;
+  top:231px;
+  left:-30px;
+  z-index: 5;
 }
