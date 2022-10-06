@@ -1,72 +1,101 @@
-import React from 'react'
-import styles from "./Footer.module.scss"
-import { InstagramLogo, TelegramLogo, FacebookLogo, FooterLogo, AppStoreDownloadIcon, GooglePlayDownloadIcon } from './svg'
-import Link from 'next/link'
+import React from "react";
+import {
+  InstagramLogo,
+  TelegramLogo,
+  FacebookLogo,
+  FooterLogo,
+  GooglePlayDownloadIcon,
+  AppStoreDownloadIcon,
+} from "./svg";
+import styles from "./Footer.module.scss";
+import Link from "next/link";
 
-const footerLinks = [
-    {
-        link: "/Главный",
-        label: "Главный",
-        id: 0
-    },
-    {
-        link: "/product",
-        label: "Филиалы",
-        id: 1
-    },
-    {
-        link: "/Вакансии",
-        label: "Вакансии",
-        id: 2
-    },
-    {
-        link: "/Блог",
-        label: "Блог",
-        id: 3
-    },
-    {
-        link: "/О нас",
-        label: "О нас",
-        id: 3
-    },
-    {
-        link: "/Контакты",
-        label: "Контакты",
-        id: 4
-    },
-
-]
+const headerLinks = [
+  {
+    link: "/home",
+    label: "Main",
+    id: 0,
+  },
+  {
+    link: "/branches",
+    label: "Branches",
+    id: 1,
+  },
+  {
+    link: "/vacancies",
+    label: "Vacancies",
+    id: 2,
+  },
+  {
+    link: "/blogs",
+    label: "Blogs",
+    id: 3,
+  },
+  {
+    link: "/about-us",
+    label: "About us",
+    id: 4,
+  },
+  {
+    link: "/contacts",
+    label: "Contacts",
+    id: 5,
+  },
+];
 
 export default function Footer() {
-    return (
-        <div className={styles.footer}>
-        
-        <div className={styles.footerTop}>
-               <a href="/">
-                <FooterLogo/>    
-                </a>
-            <ul className={styles.footerList}>
-                {footerLinks.map((item) => (
-                    <li key={item.id} className={styles.footerLink}><Link href={item.link}>{item.label}</Link></li>
+  return (
+    <div className={styles.footer}>
+      <div className={styles.container}>
+        <div>
+          <div className={styles.footerTop}>
+            <div className={styles.footerTopLeft}>
+              <a href="/">
+                <FooterLogo />
+              </a>
+              <ul className={styles.list}>
+                {headerLinks.map((item) => (
+                  <li key={item.id} className={styles.link}>
+                    <Link href={item.link}>{item.label}</Link>
+                  </li>
                 ))}
-            </ul>   
-        
-          <div className={styles.footerIcon}>
-          <a href="https://www.apple.com/uz/app-store/" className={styles.icon}><AppStoreDownloadIcon /></a>
-          <a href="https://www.google.com/"><GooglePlayDownloadIcon/></a>
-          </div>   
-        </div>
-      
-
-          <div className={styles.footerBottom}>
-            <span className={styles.footerText}>© Ladycare- 2022 All rights reserved</span>
-
+              </ul>
+            </div>
             <div>
-                <a href="https://www.instagram.com/" className={styles.icon}><InstagramLogo /></a>
-                <a href="https://www.facebook.com/" className={styles.icon}><FacebookLogo /></a>
-                <a href="https://telegram.org/"><TelegramLogo/></a>
+              <div className={styles.appsWrapper}>
+                <a href="/">
+                  <AppStoreDownloadIcon />
+                </a>
+                <a href="/">
+                  <GooglePlayDownloadIcon />
+                </a>
+              </div>
             </div>
           </div>
+          <div className={styles.footerBottom}>
+            <p className={styles.reserved}>
+              © Ladycare- 2022 All rights reserved
+            </p>
+            <ul className={styles.socialsWrapper}>
+              <li className={styles.listItem}>
+                <Link href="/">
+                  <InstagramLogo />
+                </Link>
+              </li>
+              <li className={styles.listItem}>
+                <Link href="/">
+                  <FacebookLogo />
+                </Link>
+              </li>
+              <li className={styles.listItem}>
+                <Link href="/">
+                  <TelegramLogo />
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
+    </div>
   );
 }
