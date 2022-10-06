@@ -32,6 +32,13 @@ ul, li{
   box-sizing: border-box;
 }
 
+.container {
+  max-width: 1170px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -49,7 +56,6 @@ ul, li{
   font-size: 48px;
   line-height: 57px;
   letter-spacing: 0.374px;
-
   color: #000000;
 }
 .hero-subtitle {

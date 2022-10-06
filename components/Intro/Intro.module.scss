@@ -1,0 +1,71 @@
+.intro {
+    padding-top: 155px;
+    padding-bottom: 60px;
+    background-image: linear-gradient(102.18deg, #FFFFFF 2.59%, #8F84F9 100.42%);
+}
+
+.container {
+    max-width: 1170px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.introInner {
+    display: flex;
+    justify-content: space-around;
+    gap: 52px;
+}
+.introLeft {
+    max-width: 607px;
+}
+.introLeftTitle {
+    margin: 0;
+    font-family: 'SF Pro Display';
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 57px;
+    letter-spacing: 0.374px;
+    color: #000000;
+    margin-bottom: 24px;
+}
+
+.introLeftText {
+    font-family: 'SF Pro Display';
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: 0.35px;
+    color: #141414;
+}
+
+.apps {
+    gap: 16px;
+    display: flex;
+}
+
+.introRight {
+    position: relative;
+}
+.introRightInner {
+   
+}
+
+
+.iphone{
+ position: relative;
+ top: -60px;
+}
+.img1{
+    display: inline-block;
+    position: absolute;
+    top:-30px;
+    right:-95px;
+    z-index: 5;
+}
+.img2{
+    display: inline-block;
+    position: absolute;
+    top:60px;
+    left:-85px;
+    z-index: 5; 
+}
