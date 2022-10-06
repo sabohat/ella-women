@@ -1,73 +1,41 @@
-import React, { useState, useEffect, useCallback } from "react";
-import styles from "./AboutUsHero.module.scss";
-import { AppStoreDownloadIcon, GooglePlayDownloadIcon } from "./svg";
-// import layer3 from '..public/layer3.png'
-// import layer3 from '../public/images/layer3.png'
-// ../../assets/images/layer3.png
+import React from 'react'
+import { AppStoreDownloadIcon, GooglePlayDownloadIcon } from './svg'
+import styles from './AboutUsHero.module.scss'
+import Image from 'next/image'
+import image from "../assets/img/image.png"
+import image1 from "../assets/img/image1.png"
+import image2 from "../assets/img/image2.png"
+
 
 export default function AboutUsHero() {
-  const [clientWindowHeight, setClientWindowHeight] = useState("");
-  const [leftItemTopPosition, setLeftItemTopPosition] = useState(0);
+    return (
+        <div className={`${styles.hero}`}>
+            <div className="wrapper">
+                <div className={styles.row}>
+                    <div className={styles.heroLeft}>
+                        <h3 className="hero-title">Номер один Приложение  для отслеживания месячных и циклов</h3>
+                        <p className="hero-subtitle">Lorem ipsum doro sitamet</p>
+                        <a href="https://www.apple.com/uz/app-store/" className={styles.icon}><AppStoreDownloadIcon /></a>
+                        <a href="https://www.google.com/"><GooglePlayDownloadIcon /></a>
+                    </div>
+                    <div className={styles.heroRight}>
+                        <div className={styles.heroWrapper}>
+                            <div className={styles.heroPhone}>
+                                <Image src={image} width={300} height={470} />
+                            </div>
+                            <div className={styles.heroImage}>
+                                <Image src={image1} width={215} height={270} />
+                            </div>
+                            <div className={styles.heroimg}>
+                                <Image src={image2} width={217} height={287} />
+                            </div>
+                        </div>
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  });
+                    </div>
+                </div>
 
-  const handleScroll = () => {
-    setClientWindowHeight(window.scrollY);
-  };
+            </div>
 
-  useEffect(() => {
-    let leftItemTopPositionVar = clientWindowHeight * -0.3 / 2;
-    if (leftItemTopPositionVar < 80) {
-      setLeftItemTopPosition(leftItemTopPositionVar);
-    }
-  }, [clientWindowHeight]);
-
-  return (
-    <div className={styles.hero}>
-      <div className={styles.heroContainer}>
-        <div className={styles.heroLeft}>
-          <h1 className={styles.heroLeftTitle}>
-            Номер один Приложение для отслеживания месячных и циклов
-          </h1>
-          <p className={styles.heroLeftText}>Lorem ipsum doro sitamet</p>
-          <a className={styles.heroAppStoreIcon} href="#">
-            <AppStoreDownloadIcon />
-          </a>
-          <a href="#">
-            <GooglePlayDownloadIcon />
-          </a>
         </div>
-        <div className={styles.heroRight}>
-          <div className={styles.layerWrapper}>
-            <img
-              className={styles.layerOne}
-              src="/layer3.png"
-              alt="layer3"
-              width="300"
-              height="490"
-            />
-            <img
-              className={styles.layerTwo}
-              style={{ transform: `translate(${leftItemTopPosition}px)` }}
-              src="/layer2.png"
-              alt="layer2"
-              width="250"
-              height="300"
-            />
-            <img
-              className={styles.layerThree}
-              style={{ transform: `translate(${leftItemTopPosition}px)` }}
-              src="/layer1.png"
-              alt="layer1"
-              width="250"
-              height="278"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+    )
 }
