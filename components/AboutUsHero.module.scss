@@ -5,10 +5,10 @@
 }
 .container {
   padding-left:135px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
+}
+.row{
+    display: flex;
+    justify-content: space-between;
 }
 
 .heroLeft{
@@ -41,4 +41,39 @@
 
 .icon{
   margin-right: 16px;
+}
+
+.heroRight{
+  position: relative;
+
+}
+.heroWrapper{
+    padding:97px 94px 57px 52px;
+}
+.heroPhone{
+  position: relative;
+  display: inline-block;
+  top:10px;
+  z-index: 2;
+}
+.image1{
+  position: absolute;
+  display: block;
+  top:50px;
+}
+
+.heroImage{
+  position: absolute;
+  display: inline-block;
+  top:139px;
+  left:228px;
+  z-index: 5;
+}
+
+.heroimg{
+  position: absolute;
+  display: inline-block;
+  top:231px;
+  left:-30px;
+  z-index: 5;
 }
