@@ -1,6 +1,7 @@
 import React from 'react'
 
-import styles from "./ServiceCard.module.scss"
+import styles from "./ServiceCard.module.scss";
+
 export default function ServiceCard({ card }) {
     return (
         <div className={styles.card}>
