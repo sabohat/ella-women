@@ -28,7 +28,7 @@ export default function ServiceSection() {
   ];
   return (
     <div className="wrapper">
-      <SectionTitle sectionTitle="Какие сервисы предоставляет Ladycare?" />
+      <SectionTitle>Какие сервисы предоставляет Ladycare?</SectionTitle>
       <div className={styles.cardsWrapper}>
         {cardList.map((card, i) => (
           <ServiceCard key={i} card={card} />
