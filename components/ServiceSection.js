@@ -1,5 +1,7 @@
 import React from 'react'
+import SectionTitle from './SectionTitle'
 import ServiceCard from './ServiceCard'
+import styles from "./ServiceCard.module.scss"
 
 import { PregnancyCalendarIcon, PregnancyStagesIcon, VaginaIcon } from './svg'
 
@@ -26,12 +28,15 @@ export default function ServiceSection() {
     ]
     return (
         <>
-            <div>
+            <div className='wrapper'>
+            <SectionTitle sectionTitle="Какие сервисы предоставляет Ladycare?"/>
+            <div className={styles.cardsWrapper}>
                 {
-                    cardList.map((card) =>
-                        <ServiceCard card={card} />
+                    cardList.map((card, i) =>
+                        <ServiceCard  key={i} card={card} />
                     )
                 }
+            </div>
             </div>
         </>
 
