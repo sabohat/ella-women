@@ -71,13 +71,13 @@ a {
 
 .wrapper {
   max-width: 1440px;
-  margin: 0 135px;
+  padding: 0 135px;
 
   @media (max-width: 1440px) {
-    margin: 0 60px;
+    padding: 0 60px;
   }
 
   @media (max-width: 768px) {
-    margin: 0 16px;
+    padding: 0 16px;
   }
 }
