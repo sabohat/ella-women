@@ -10,6 +10,11 @@
     background-color: white;
     border: 1px solid #E8E9EB;
     border-radius: 8px;
+    transition: 0.3s ease-in-out;
+    &:hover{
+        transition: 0.3s ease-in-out;
+        box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    }
 }
 
 .cardDate {
@@ -49,5 +54,18 @@
 }
 
 .cardImage{
+    transition: 0.3s ease-in-out !important;
+    &:hover{
+        transition: 0.3s ease-in-out !important;
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        -webkit-transition: 0.3s ease-in-out !important;
+        -moz-transition: 0.3s ease-in-out !important;
+        -ms-transition: 0.3s ease-in-out !important;
+        -o-transition: 0.3s ease-in-out !important;
+    }
     border-radius: 8px !important;
 }
