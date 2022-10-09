@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import AboutUsHero from '../components/AboutUsHero'
+import ArticleSection from '../components/ArticleSection'
 
 import Header from '../components/Header'
 import ServiceCard from '../components/ServiceSection'
@@ -12,6 +13,7 @@ export default function Home() {
     <>
       <AboutUsHero />
       <ServiceCard/>
+      <ArticleSection />
     </>
   )
 }

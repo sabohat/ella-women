@@ -1,0 +1,53 @@
+.cardsWrapper {
+    display: flex;
+    gap: 24px;
+    padding-top: 32px;
+    padding-bottom: 64px;
+}
+
+.card {
+    padding: 12px 16px 24px;
+    background-color: white;
+    border: 1px solid #E8E9EB;
+    border-radius: 8px;
+}
+
+.cardDate {
+    margin-left: 8px;
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 180%;
+    color: #939393;
+}
+
+.cardDateWrapper {
+    margin-bottom: 8px;
+    margin-top: 16px;
+}
+
+.cardTitle {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    color: #000000;
+    opacity: 0.8;
+    margin-bottom: 8px;
+    margin-top: 0;
+}
+
+.cardSubtitle {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 180%;
+    color: #2d2d2d;
+    opacity: 0.8;
+    margin: 0;
+}
+
+.cardImage{
+    border-radius: 8px !important;
+}
