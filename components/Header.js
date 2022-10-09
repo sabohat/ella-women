@@ -1,4 +1,6 @@
-import React from 'react'
+
+
+
 import Link from 'next/link'
 
 import styles from './Header.module.scss'
@@ -28,15 +30,17 @@ const headerLinks = [
 ]
 export default function Header() {
     return (
-        <div className={styles.header}>
-            <div>
-                <LogoIcon />
+        <div className='wrapper'>
+            <div className={styles.header}>
+                <div>
+                    <LogoIcon />
+                </div>
+                <ul className={styles.list}>
+                    {headerLinks.map((item) => (
+                        <li key={item.id} className={styles.link}><Link href={item.link}>{item.label}</Link></li>
+                    ))}
+                </ul>
             </div>
-            <ul className={styles.list}>
-                {headerLinks.map((item) => (
-                    <li key={item.id} className={styles.link}><Link href={item.link}>{item.label}</Link></li>
-                ))}
-            </ul>
         </div>
     )
 }

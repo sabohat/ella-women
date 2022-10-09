@@ -1,3 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@400;500;700&display=swap");
+
+@font-face {
+  font-family: "SF Pro Display";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../assets/fonts/sf-pro-display-cufonfonts/SFPRODISPLAYREGULAR.OTF");
+}
+@font-face {
+  font-family: "SF Pro Display";
+  font-weight: 600;
+  src: url("../assets/fonts/sf-pro-display-cufonfonts/SFPRODISPLAYMEDIUM.OTF");
+}
+
 html,
 body {
   padding: 0;
@@ -53,4 +67,17 @@ a {
   letter-spacing: 0.41px;
 
   color: #000000;
+}
+
+.wrapper {
+  max-width: 1440px;
+  padding: 0 135px;
+
+  @media (max-width: 1440px) {
+    padding: 0 60px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 16px;
+  }
 }
