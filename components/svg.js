@@ -272,3 +272,19 @@ export const PregnancyStagesIcon = () => (
         </defs>
     </svg>
 )
+export const CalendarIcon = ()=>(
+<svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_138_4619)">
+<path d="M12.6667 3.33691H3.33333C2.59695 3.33691 2 3.93387 2 4.67025V14.0036C2 14.74 2.59695 15.3369 3.33333 15.3369H12.6667C13.403 15.3369 14 14.74 14 14.0036V4.67025C14 3.93387 13.403 3.33691 12.6667 3.33691Z" stroke="#939393" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10.6665 2.00293V4.6696" stroke="#939393" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5.3335 2.00293V4.6696" stroke="#939393" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2 7.33691H14" stroke="#939393" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_138_4619">
+<rect width="16" height="16" fill="white" transform="translate(0 0.669922)"/>
+</clipPath>
+</defs>
+</svg>
+
+)
