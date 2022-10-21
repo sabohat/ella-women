@@ -1,0 +1,58 @@
+.articleSection{
+    background-color: #F4F3FF;
+    padding:64px 0 64px 0;
+}
+
+.cardwrapper{
+    display:flex;
+    justify-content: space-between;
+    margin-top:32px;
+    gap:24px;
+    
+}
+.card{
+    background-color: #fff;
+    padding:12px 16px 24px 16px;
+    border-radius: 8px;
+    border: 1px solid #E8E9EB;
+    box-shadow: 0px 6px 12px -6px rgba(24, 39, 75, 0.12), 0px 8px 24px -4px rgba(24, 39, 75, 0.08);
+    transition: transform 0.5s;
+    &:hover{
+        transform: scale3d(1.006, 1.006, 1);
+    }
+}
+
+.cardImg{
+    border-radius: 5px;
+
+}
+.cardTitle{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    color: #000000;
+    opacity: 0.8;
+    margin:8px 0;
+}
+.cardText{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 180%;
+    color: #2D2D2D;
+    opacity: 0.8;
+}
+.cardDate{
+    display: inline-block;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 180%;
+    color: #939393;
+    margin-top:16px;
+    margin-left:8px;
+}
