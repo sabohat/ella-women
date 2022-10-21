@@ -1,0 +1,71 @@
+.cardsWrapper {
+    display: flex;
+    gap: 24px;
+    padding-top: 32px;
+    padding-bottom: 64px;
+}
+
+.card {
+    padding: 12px 16px 24px;
+    background-color: white;
+    border: 1px solid #E8E9EB;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+    &:hover{
+        transition: 0.3s ease-in-out;
+        box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    }
+}
+
+.cardDate {
+    margin-left: 8px;
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 180%;
+    color: #939393;
+}
+
+.cardDateWrapper {
+    margin-bottom: 8px;
+    margin-top: 16px;
+}
+
+.cardTitle {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    color: #000000;
+    opacity: 0.8;
+    margin-bottom: 8px;
+    margin-top: 0;
+}
+
+.cardSubtitle {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 180%;
+    color: #2d2d2d;
+    opacity: 0.8;
+    margin: 0;
+}
+
+.cardImage{
+    transition: 0.3s ease-in-out !important;
+    &:hover{
+        transition: 0.3s ease-in-out !important;
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        -webkit-transition: 0.3s ease-in-out !important;
+        -moz-transition: 0.3s ease-in-out !important;
+        -ms-transition: 0.3s ease-in-out !important;
+        -o-transition: 0.3s ease-in-out !important;
+    }
+    border-radius: 8px !important;
+}
