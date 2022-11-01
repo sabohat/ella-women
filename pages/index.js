@@ -7,6 +7,8 @@ import ArticleSection from '../components/ArticleSection'
 import Header from '../components/Header'
 import ServiceCard from '../components/ServiceSection'
 import styles from '../styles/Home.module.css'
+
+// copy this to support translations
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 export default function Home() {
@@ -19,6 +21,7 @@ export default function Home() {
   )
 }
 
+// copy this to support translations
 export const getServerSideProps = async ({ locale }) => ({
   props: {
     ...(await serverSideTranslations(locale, ['common']))
