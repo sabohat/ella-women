@@ -1,0 +1,38 @@
+.wrapper {
+    background: #F6F8F9;
+    border-radius: 12px;
+    padding: 12px;
+    margin-left: 72px;
+    position: relative;
+}
+
+.wrapperInner{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition:0.3s ease;
+    padding: 0 4px;
+}
+
+.wrapperInner:hover {
+    background:#7165E5;
+    color:white;
+}
+
+.dropdown{border-radius:4px;
+    padding: 4px 0;
+    cursor: pointer;
+    width: 80px;
+    position: absolute;
+    background: #F4F3FF;
+    top: 52px;
+    left: 0;
+    border: 1px solid #b8b8bd;
+}
+.dropdown ~ span{
+
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 2px;
+}

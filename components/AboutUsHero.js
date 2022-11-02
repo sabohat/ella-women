@@ -8,24 +8,22 @@ import { useTranslation } from 'react-i18next'
 
 
 export default function AboutUsHero() {
-    const t = useTranslation('common')
+    const {t} = useTranslation('common')
     return (
-        <div className={`${styles.hero}`}>
+        <div className={styles.hero}>
             <div className="wrapper">
                 <div className={styles.row}>
                     <div className={styles.heroLeft}>
-                        <h3 className="hero-title">{t('Номер один Приложение  для отслеживания месячных и циклов')}</h3>
-                        <p className="hero-subtitle">Lorem ipsum doro sitamet</p>
+                        <h3 className="hero-title">{t('hero_title')}</h3>
+                        <p className="hero-subtitle">{t("hero_subtitle")}</p>
                         <a href="https://www.apple.com/uz/app-store/" className={styles.icon}><AppStoreDownloadIcon /></a>
                         <a href="https://www.google.com/"><GooglePlayDownloadIcon /></a>
                     </div>
                     <div className={styles.heroRight}>
-                        <Image src={image} width={550} height={480} />
+                        <Image src={image} width={550} height={480} alt="image"/>
                     </div>
-
                 </div>
             </div>
-
         </div>
 
     )

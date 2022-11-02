@@ -2,33 +2,34 @@ import React from "react";
 import SectionTitle from "./SectionTitle";
 import ServiceCard from "./ServiceCard";
 import styles from "./ServiceCard.module.scss";
+import { useTranslation } from 'react-i18next'
 
 import { PregnancyCalendarIcon, PregnancyStagesIcon, VaginaIcon } from "./svg";
 
 export default function ServiceSection() {
+  const {t} = useTranslation('common')
   const cardList = [
     {
-      title: "Отслеживание цикла",
-      subtitle: "Поймите свой цикл и почувствуйте себя лучшей",
+      title: "serviceCard_subtitle",
+      subtitle: "serviceCard_text",
       // svg: (height, width) => <VaginaIcon height={height} width={width} />
       svg: <VaginaIcon />,
     },
     {
-      title: "Увеличьте свои шансы забеременеть",
-      subtitle:
-        "Особые условия для покупателей апартаментов, автомобиль в аренду за сто рублей на срок до года",
+      title: "serviceCard_subtitle2",
+      subtitle:"serviceCard_text2",
       svg: <PregnancyCalendarIcon />,
     },
     {
-      title: "Будьте здоровы во время беременности",
+      title: "serviceCard_subtitle3",
       subtitle:
-        "Особые условия для покупателей апартаментов, автомобиль в аренду за сто рублей на срок до года",
+        "serviceCard_text3",
       svg: <PregnancyStagesIcon />,
     },
   ];
   return (
     <div className="wrapper">
-      <SectionTitle>Какие сервисы предоставляет Ladycare?</SectionTitle>
+      <SectionTitle>{t('serviceCard_title')}</SectionTitle>
       <div className={styles.cardsWrapper}>
         {cardList.map((card, i) => (
           <ServiceCard key={i} data={card} />
