@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next'
 
 
 export default function AboutUsHero() {
-    const t = useTranslation('common')
+    const {t} = useTranslation('common')
     return (
         <div className={`${styles.hero}`}>
             <div className="wrapper">
