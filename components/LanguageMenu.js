@@ -1,15 +1,17 @@
 import { i18n } from 'next-i18next'
 import { useRouter } from 'next/router'
-import React, { useState } from 'react'
+import React, { useState, useTransition } from 'react'
 import styles from "./LanguageMenu.module.scss"
 import Image from 'next/image'
 import uz from "../assets/img/uz.png"
 import ru from "../assets/img/ru.png"
 import arrow from "../assets/img/arrow-down.png"
+import { useTranslation } from 'next-i18next'
 
 export default function LanguageMenu() {
     const router = useRouter()
     const [isOpen, setIsOpen] = useState(false);
+    const { i18n } = useTranslation()
 
     const onToggleLanguageClick = (newLocale) => {
         const { pathname, asPath, query } = router
@@ -40,20 +42,21 @@ export default function LanguageMenu() {
                     <Image className={isOpen ? styles.rotateArrow : ''} src={arrow} width={24} height={24} alt='image' />
                 </span>
 
-                <div className={styles.dropdown}>
-                    {isOpen && langs.filter((item) => item.lang != router.locale)
-                        .map((item) => {
-                            <ul onCLick={() => onToggleLanguageClick(changeTo)}
-                                className={styles.wrapperInner}
-                            >
-                                <li>
-                                    <Image src={item.img} width={24} height={24} alt='image' />
-                                    {item.lang}
-                                </li>
-                            </ul>
-                        })
+                {isOpen && <div className={styles.dropdown}>
+                    {langs.filter((item) => item.lang != router.locale)
+                        .map((item) => <ul onClick={() =>
+                            onToggleLanguageClick(changeTo)
+                        }
+                            className={styles.wrapperInner}
+                        >
+                            <li>
+                                <Image src={item.img} width={24} height={24} alt='image' />
+                                {item.lang}
+                            </li>
+                        </ul>
+                        )
                     }
-                </div>
+                </div>}
             </div>
 
         </>
