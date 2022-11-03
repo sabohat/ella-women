@@ -35,7 +35,7 @@ export default function LanguageMenu() {
         <>
             <div className={styles.wrapper}  >
 
-                <span className={styles.main} onClick={setIsOpen(!isOpen)}>
+                <span className={styles.main} onClick={() => setIsOpen(!isOpen)}>
                     <Image src={router.locale === 'ru' ? ru : uz} width={24} height={24} alt='image' />
                     <Image className={isOpen ? styles.rotateArrow : ''} src={arrow} width={24} height={24} alt='image' />
                 </span>
