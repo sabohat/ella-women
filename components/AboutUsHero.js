@@ -3,7 +3,7 @@ import { AppStoreDownloadIcon, GooglePlayDownloadIcon } from './svg'
 import styles from './AboutUsHero.module.scss'
 import Image from 'next/image'
 import image from "../assets/img/hero.png"
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'next-i18next'
 
 
 

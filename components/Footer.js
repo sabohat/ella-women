@@ -2,7 +2,7 @@ import React from 'react'
 import styles from "./Footer.module.scss"
 import { InstagramLogo, TelegramLogo, FacebookLogo, FooterLogo, AppStoreDownloadIcon, GooglePlayDownloadIcon } from './svg'
 import Link from 'next/link'
-
+import { useTranslation } from 'next-i18next'
 const footerLinks = [
     {
         link: "/Главный",

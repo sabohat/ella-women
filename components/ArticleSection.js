@@ -5,7 +5,7 @@ import styles from "./ArticleCard.module.scss";
 import articleImg1 from "../assets/img/article-card-1.png";
 import articleImg2 from "../assets/img/article-card-2.png";
 import articleImg3 from "../assets/img/article-card-3.png";
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'next-i18next'
 
 export default function ArticleSection() {
   const {t} = useTranslation('common')

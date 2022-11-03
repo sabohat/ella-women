@@ -2,7 +2,7 @@ import React from "react";
 import SectionTitle from "./SectionTitle";
 import ServiceCard from "./ServiceCard";
 import styles from "./ServiceCard.module.scss";
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'next-i18next'
 
 import { PregnancyCalendarIcon, PregnancyStagesIcon, VaginaIcon } from "./svg";
 
