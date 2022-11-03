@@ -1,20 +1,62 @@
 import { i18n } from 'next-i18next'
 import { useRouter } from 'next/router'
-import React from 'react'
+import React, { useState } from 'react'
 import styles from "./LanguageMenu.module.scss"
+import Image from 'next/image'
+import uz from "../assets/img/uz.png"
+import ru from "../assets/img/ru.png"
+import arrow from "../assets/img/arrow-down.png"
 
 export default function LanguageMenu() {
     const router = useRouter()
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const [isOpen, setIsOpen] = useState(false);
+
     const onToggleLanguageClick = (newLocale) => {
         const { pathname, asPath, query } = router
         router.push({ pathname, query }, asPath, { locale: newLocale })
+        setIsOpen(!isOpen);
     }
 
     const changeTo = router.locale === 'ru' ? 'uz' : 'ru'
-
-    console.log("ROUTER", router)
+    const langs = [
+        {
+            lang: "uz",
+            id: 0,
+            img: uz
+        },
+        {
+            lang: "ru",
+            id: 1,
+            img: ru
+        },
+    ]
+    // console.log("ROUTER", router) onClick={() => onToggleLanguageClick(changeTo)}
     return (
-        <div onClick={() => onToggleLanguageClick(changeTo)}>{router.locale === "uz" ? "Ru" : "Uz"}</div>
+        <>
+            <div className={styles.wrapper}  >
+
+                <span className={styles.main} onClick={setIsOpen(!isOpen)}>
+                    <Image src={router.locale === 'ru' ? ru : uz} width={24} height={24} alt='image' />
+                    <Image className={isOpen ? styles.rotateArrow : ''} src={arrow} width={24} height={24} alt='image' />
+                </span>
+
+                <div className={styles.dropdown}>
+                    {isOpen && langs.filter((item) => item.lang != router.locale)
+                        .map((item) => {
+                            <ul onCLick={() => onToggleLanguageClick(changeTo)}
+                                className={styles.wrapperInner}
+                            >
+                                <li>
+                                    <Image src={item.img} width={24} height={24} alt='image' />
+                                    {item.lang}
+                                </li>
+                            </ul>
+                        })
+                    }
+                </div>
+            </div>
+
+        </>
+
     )
 }

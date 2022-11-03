@@ -41,7 +41,9 @@ export default function Header() {
                 <div className={styles.menu}>
                     <ul className={styles.list}>
                         {headerLinks.map((item) => (
-                            <li key={item.id} className={styles.link}><Link href={item.link}>{t(item.label)}</Link></li>
+                            <li key={item.id} className={styles.link}>
+                                <Link href={item.link}>{t(item.label)}
+                                </Link></li>
                         ))}
                     </ul>
                     <LanguageMenu />
