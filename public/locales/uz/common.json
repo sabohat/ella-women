@@ -2,5 +2,18 @@
   "articles": "maqolalar",
   "products": "mahsulotlar",
   "calculators": "kalkulyatorlar",
-  "about_us": "biz haqimizda"
+  "about_us": "biz haqimizda",
+  "heroTitle":"Davrlar va tsikllarni kuzatish uchun birinchi raqamli ilova",
+  "serviceTitle":"Ladycare qanday xizmatlarni taqdim etadi?",
+  "serviceCard_title":"Tsiklni kuzatish",
+  "serviceCard_subtitle":"O'z tsiklingizni tushuning va o'zingizni eng yaxshi his qiling",
+  "serviceCard_title1":"Homilador bo'lish ehtimolini oshiring",
+  "serviceCard_subtitle1":"Kvartira xaridorlari uchun maxsus shartlar, yuz rublga bir yilgacha avtomobil ijarasi",
+  "serviceCard_title2":"Homiladorlik paytida sog'lom bo'ling",
+  "serviceCard_subtitle2":"Kvartira xaridorlari uchun maxsus shartlar, yuz rublga bir yilgacha avtomobil ijarasi",
+  "articleTitle":"Siz uchun qiziqarli maqolalar",
+  "articleCard_title":"Milliy loyiha “Yashil makon",
+  "articlecard_subtitle":"Eshitish qobiliyatini qisman yoki to'liq yo'qotish bolalarni muhim ma'lumot manbasidan mahrum qiladi va ..."
+  
+  
 }
