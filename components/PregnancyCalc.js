@@ -1,4 +1,5 @@
-import React from 'react'
+import dayjs from 'dayjs';
+import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next';
 import MuiButton from './common/Button';
 import Button from './common/Button';
@@ -9,6 +10,32 @@ import { FireWorkBottom, FireWorks, FireWorkTop } from './svg';
 
 export default function PregnancyCalc() {
     const { t } = useTranslation()
+
+    const [date, setDate] = useState(null)
+
+    const calculate = () => {
+
+        const givenDate = dayjs(date)
+        const now = dayjs()
+
+        // subtract 3 months add 1 year and 7 days
+        const birthDate = dayjs(givenDate).subtract(3, 'month').add(1, 'year').add(7, 'day')
+        console.log(date)
+
+        // find difference in weeks: which week is she now?
+        const pregWeeks = now.diff(givenDate, 'days');
+
+        // divide into trimesters
+
+        // 1st trimester, 1week - 12week
+        const firstTrimesterEnd = dayjs(givenDate).add(12, 'week').subtract(1, 'day')
+
+        // 2nd Trimester start
+        const secondTrimesterStart = dayjs(givenDate).add(12, 'week')
+        const secondTrimesterEnd = dayjs(givenDate).add(26, 'week').subtract(1, 'day')
+        // 3rd TrimesterStart
+        const thirdTrimesterStart = dayjs(givenDate).add(26, 'week')
+    }
     return (
         <>
             <div className={styles.hero}>
@@ -21,14 +48,14 @@ export default function PregnancyCalc() {
                         <div className={styles.calcWrapper}>
                             <div className={styles.inputs}>
                                 <div className={styles.input}>
-                                    <MuiDatePicker label={"Первый день последней менструации"} />
+                                    <MuiDatePicker value={date} setValue={setDate} label={"Первый день последней менструации"} />
                                 </div>
                                 <div className={styles.input}>
                                     <MuiTextFields label="Средняя длина цикла(дни)" />
                                 </div>
                             </div>
                             <div className={styles.button}>
-                                <MuiButton label="Показать резулат" />
+                                <MuiButton label="Показать резулат" onClick={() => calculate()} />
 
                             </div>
                         </div>

@@ -8,9 +8,7 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { MobileDatePicker } from '@mui/x-date-pickers/MobileDatePicker';
 import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
 
-export default function MuiDatePickers({ label = "" }) {
-    const [value, setValue] = React.useState(dayjs('2022-04-07'));
-
+export default function MuiDatePickers({ label = "", value, setValue = () => { } }) {
     return (
         <LocalizationProvider dateAdapter={AdapterDayjs}>
             <Stack spacing={3}>
