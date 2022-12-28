@@ -1,0 +1,49 @@
+.hero {
+  width: 100%;
+  padding: 60px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    107.36deg,
+    #ffffff -13.18%,
+    #ffffff -13.18%,
+    #b5adff 164.94%
+  );
+}
+
+.content {
+  width: 100%;
+  text-align: center;
+}
+
+.titleWrapper {
+  background: red;
+  padding: 50px;
+}
+
+.calcWrapper {
+  padding: 24px;
+  width: 873px;
+  height: 227px;
+
+  background: #f7f7f7;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.inputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input {
+  width: 48%;
+}
+
+.button {
+  margin-top: 30px;
+}
