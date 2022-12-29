@@ -1,9 +1,10 @@
 import dayjs from 'dayjs';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next';
 import MuiButton from './common/Button';
 import Button from './common/Button';
 import MuiDatePicker from './common/MuiDatePicker';
+import MuiProgress from './common/MuiProgress';
 import MuiTextFields from './common/MuiTextField';
 import styles from "./PregnancyCalc.module.scss";
 import { FireWorkBottom, FireWorks, FireWorkTop } from './svg';
@@ -13,7 +14,11 @@ export default function PregnancyCalc() {
 
     const [date, setDate] = useState(null)
 
+    const [isLoading, setIsLoading] = useState(false)
+    const [isCalculated, setCalculated] = useState(false)
+
     const calculate = () => {
+        setIsLoading(true)
 
         const givenDate = dayjs(date)
         const now = dayjs()
@@ -35,7 +40,12 @@ export default function PregnancyCalc() {
         const secondTrimesterEnd = dayjs(givenDate).add(26, 'week').subtract(1, 'day')
         // 3rd TrimesterStart
         const thirdTrimesterStart = dayjs(givenDate).add(26, 'week')
+
+
+        setCalculated(true)
+        setIsLoading(false)
     }
+
     return (
         <>
             <div className={styles.hero}>
@@ -62,7 +72,10 @@ export default function PregnancyCalc() {
                     </div>
                 </div>
             </div>
-            <div className={styles.body}>
+
+            {isLoading && <MuiProgress />}
+
+            {isCalculated && !isLoading && <div className={styles.body}>
                 <div className='wrapper'>
                     <div className={styles.content}>
                         <div classname={styles.titleWrapper}>
@@ -107,11 +120,13 @@ export default function PregnancyCalc() {
                             </div>
                         </div>
                         <div className={` ${styles.resultContainer} ${styles.weekContainer}`}>
-                            <span>Siz hozir 6-haftadasiz 😊</span>
+                            <span>Вы сейчас на 6 неделе 😊</span>
                         </div>
                     </div>
                 </div>
             </div>
+            }
+
         </>
     )
 }
