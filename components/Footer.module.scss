@@ -1,49 +1,73 @@
 .footer {
-    width: 100%;
-    background-color:#7165E5;
-    padding: 52px 48px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  background-color: #7165e5;
+  padding: 52px 48px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.06);
 }
-.footerTop{
+.footerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 48px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.footerIcon {
+  @media (max-width: 768px) {
     display: flex;
-    justify-content: space-between;
-    align-items: center; 
-    margin-bottom:48px;
+    flex-direction: column;
+    margin-top: 30px;
+    justify-content: center;
+  }
 }
-.footerList{
-   display: flex;
-   list-style-type: none;
-   align-items: center;
-  
-}
-
-
-.footerLink{
-    margin-right:12px;
-    margin-left:12px;
-    font-family: Montserrat;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 22px;
-    letter-spacing: -0.41px;
-    color:#fff;
-
+.footerList {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
 }
 
-.footerBottom{
+.footerLink {
+  margin-right: 12px;
+  margin-left: 12px;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: -0.41px;
+  color: #fff;
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 24px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+.footerText {
+  font-family: Montserrat;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: -0.4px;
+  color: #fff;
+}
+.footerSocialLinks {
+  @media (max-width: 768px) {
+      margin-top: 20px;
     display: flex;
-    justify-content: space-between;
-    padding-top:24px;
-  
+  }
+  .icon {
+    margin-right: 16px;
+  }
 }
-.footerText{
-    font-family: Montserrat;
-    font-size: 17px;
-    font-weight: 500;
-    line-height: 22px;
-    letter-spacing: -0.4px;
-    color:#fff;
-}
-.icon{
-   margin-right: 16px;
+.icon {
+  margin-right: 16px;
+  @media (max-width: 768px) {
+    margin: 0;
+  }
 }

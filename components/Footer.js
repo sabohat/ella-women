@@ -40,33 +40,33 @@ const footerLinks = [
 export default function Footer() {
     return (
         <div className={styles.footer}>
-        
-        <div className={styles.footerTop}>
-               <a href="#">
-                <FooterLogo/>    
+
+            <div className={styles.footerTop}>
+                <a href="#">
+                    <FooterLogo />
                 </a>
-            <ul className={styles.footerList}>
+                {/* <ul className={styles.footerList}>
                 {footerLinks.map((item) => (
                     <li key={item.id} className={styles.footerLink}><Link href={item.link}>{item.label}</Link></li>
                 ))}
-            </ul>   
-        
-          <div className={styles.footerIcon}>
-          <a href="https://www.apple.com/uz/app-store/" className={styles.icon}><AppStoreDownloadIcon /></a>
-          <a href="https://www.google.com/"><GooglePlayDownloadIcon/></a>
-          </div>   
-        </div>
-      
+            </ul>    */}
 
-          <div className={styles.footerBottom}>
-            <span className={styles.footerText}>© Ladycare- 2022 All rights reserved</span>
-
-            <div>
-                <a href="https://www.instagram.com/" className={styles.icon}><InstagramLogo /></a>
-                <a href="https://www.facebook.com/" className={styles.icon}><FacebookLogo /></a>
-                <a href="https://telegram.org/"><TelegramLogo/></a>
+                <div className={styles.footerIcon}>
+                    <a href="https://www.apple.com/uz/app-store/" className={styles.icon}><AppStoreDownloadIcon /></a>
+                    <a href="https://www.google.com/"><GooglePlayDownloadIcon /></a>
+                </div>
             </div>
-          </div>
+
+
+            <div className={styles.footerBottom}>
+                <span className={styles.footerText}>© Ladycare- 2022 All rights reserved</span>
+
+                <div className={styles.footerSocialLinks}>
+                    <a href="https://www.instagram.com/" className={styles.icon}><InstagramLogo /></a>
+                    <a href="https://www.facebook.com/" className={styles.icon}><FacebookLogo /></a>
+                    <a href="https://telegram.org/"><TelegramLogo /></a>
+                </div>
+            </div>
         </div>
-  );
+    );
 }
