@@ -151,10 +151,16 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 .trimesterCard {
   width: 32%;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 }
 
 .trimesterText {
