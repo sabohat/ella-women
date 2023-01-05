@@ -3,7 +3,7 @@ import('dayjs/locale/ru')
 import('dayjs/locale/uz-latn')
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from 'react'
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'next-i18next';
 import MuiButton from './common/Button';
 import Button from './common/Button';
 import MuiDatePicker from './common/MuiDatePicker';
@@ -11,6 +11,7 @@ import MuiProgress from './common/MuiProgress';
 import MuiTextFields from './common/MuiTextField';
 import styles from "./PregnancyCalc.module.scss";
 import { FireWorkBottom, FireWorks, FireWorkTop } from './svg';
+
 
 export default function PregnancyCalc() {
     const { t } = useTranslation("common")
@@ -24,7 +25,12 @@ export default function PregnancyCalc() {
     const [data, setData] = useState({})
 
     const calculate = () => {
+        if (!date) {
+            return setIsLoading(false)
+        }
+        
         setIsLoading(true)
+        
 
         const givenDate = dayjs(date)
         const now = dayjs()
@@ -82,7 +88,7 @@ export default function PregnancyCalc() {
                                     <MuiDatePicker value={date} setValue={setDate} label={t("First day of the last cycle")} />
                                 </div>
                                 <div className={styles.input}>
-                                    <MuiTextFields label="Average cycle length" />
+                                    <MuiTextFields label={t("Average cycle length")} />
                                 </div>
                             </div>
                             <div className={styles.button}>
@@ -151,3 +157,4 @@ export default function PregnancyCalc() {
         </>
     )
 }
+
