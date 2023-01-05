@@ -27,12 +27,12 @@ const footerLinks = [
     {
         link: "/О нас",
         label: "О нас",
-        id: 3
+        id: 4
     },
     {
         link: "/Контакты",
         label: "Контакты",
-        id: 4
+        id: 5
     },
 
 ]
