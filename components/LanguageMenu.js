@@ -24,7 +24,6 @@ export default function LanguageMenu() {
 
   const toggling = () => setIsOpen(!isOpen);
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const onToggleLanguageClick = (newLocale) => {
     const { pathname, asPath, query } = router;
     router.push({ pathname, query }, asPath, { locale: newLocale });
@@ -37,19 +36,20 @@ export default function LanguageMenu() {
   return (
     <div className={styles.languageMenu}>
       <div className={styles.languageMenuTop} onClick={toggling}>
-       <span>
-       <Image
-          className={styles.languageSelectIcon}
-          src={router.locale === "uz" ? uzFlag : ruFlag}
-        />
-       </span>
-        <span className={isOpen ? styles.activeLanguageArrow : styles.languageArrow}><ArrowDown/></span>
+        <span>
+          <Image
+            className={styles.languageSelectIcon}
+            src={router.locale === "uz" ? uzFlag : ruFlag}
+          />
+        </span>
+        <span className={isOpen ? styles.activeLanguageArrow : styles.languageArrow}><ArrowDown /></span>
       </div>
       {isOpen &&
         langMenuList
           .filter((item) => item.title != router.locale)
-          .map((item) => (
+          .map((item, idx) => (
             <ul
+              key={idx}
               onClick={() => onToggleLanguageClick(changeTo)}
               className={styles.languageMenuBottom}
             >
