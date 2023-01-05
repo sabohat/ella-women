@@ -1,5 +1,7 @@
 import dayjs from 'dayjs';
-require('dayjs/locale/ru')
+import('dayjs/locale/ru')
+import('dayjs/locale/uz-latn')
+import { useRouter } from "next/router";
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next';
 import MuiButton from './common/Button';
@@ -11,8 +13,10 @@ import styles from "./PregnancyCalc.module.scss";
 import { FireWorkBottom, FireWorks, FireWorkTop } from './svg';
 
 export default function PregnancyCalc() {
-    const { t } = useTranslation()
+    const { t } = useTranslation("common")
+    const router = useRouter();
 
+    const currentLanguage = router.locale == "uz" ? "uz-latn" : "ru"
     const [date, setDate] = useState(null)
 
     const [isLoading, setIsLoading] = useState(false)
@@ -69,20 +73,20 @@ export default function PregnancyCalc() {
                 <div className='wrapper'>
                     <div className={styles.content}>
                         <div classname={styles.titleWrapper}>
-                            <h2 className='section-title'>Калькулятор беременности: </h2>
-                            <h2 className='section-title'>подсчитайте, когда родится ваш ребенок</h2>
+                            <h2 className='section-title'>{t("Pregnancy calculator: ")}</h2>
+                            <h2 className='section-title'>{t("Calculate when you will meet your baby")}</h2>
                         </div>
                         <div className={styles.calcWrapper}>
                             <div className={styles.inputs}>
                                 <div className={styles.input}>
-                                    <MuiDatePicker value={date} setValue={setDate} label={"Первый день последней менструации"} />
+                                    <MuiDatePicker value={date} setValue={setDate} label={t("First day of the last cycle")} />
                                 </div>
                                 <div className={styles.input}>
-                                    <MuiTextFields label="Средняя длина цикла(дни)" />
+                                    <MuiTextFields label="Average cycle length" />
                                 </div>
                             </div>
                             <div className={styles.button}>
-                                <MuiButton label="Показать резулат" onClick={() => calculate()} />
+                                <MuiButton label={t("Show result")} onClick={() => calculate()} />
 
                             </div>
                         </div>
@@ -96,7 +100,7 @@ export default function PregnancyCalc() {
                 <div className='wrapper'>
                     <div className={styles.content}>
                         <div classname={styles.titleWrapper}>
-                            <h2 className='section-title'>Результат</h2>
+                            <h2 className='section-title'>{t("Result")}</h2>
                         </div>
                         <div className={styles.resultContainer}>
                             <div className={styles.resultCard}>
@@ -108,36 +112,36 @@ export default function PregnancyCalc() {
                                 </div>
 
 
-                                <p className={styles.boldText}>Вы встретите своего ребенка в</p>
-                                <h2 className={styles.resultText}>{dayjs(data?.birthDate).locale('ru').format('D MMMM, YYYY')}</h2>
-                                <span className={styles.bottomText}>{dayjs(data?.birthDate).locale('ru').format('dddd')}</span>
+                                <p className={styles.boldText}>{t("You will meet your baby at")}</p>
+                                <h2 className={styles.resultText}>{dayjs(data?.birthDate).locale(currentLanguage).format('D MMMM, YYYY')}</h2>
+                                <span className={styles.bottomText}>{dayjs(data?.birthDate).locale(currentLanguage).format('dddd')}</span>
                             </div>
                             <div className={styles.trimester}>
                                 <div className={styles.trimesterCard}>
                                     <div className={styles.trimesterText}>
                                         <h3>{t("1st trimester")}</h3>
-                                        <span className={styles.grayText}>{dayjs(data?.firstTrimesterStart).locale('ru').format('D MMM, YYYY')} {' - '} {dayjs(data?.firstTrimesterEnd).format('D MMM, YYYY')}</span>
+                                        <span className={styles.grayText}>{dayjs(data?.firstTrimesterStart).locale(currentLanguage).format('D MMMM')} {' - '} {dayjs(data?.firstTrimesterEnd).format('D MMMM')}</span>
                                     </div>
                                     <div className={styles.line}></div>
                                 </div>
                                 <div className={styles.trimesterCard}>
                                     <div className={styles.trimesterText}>
-                                        <h3>{t("1st trimester")}</h3>
-                                        <span className={styles.grayText}>{dayjs(data?.firstTrimesterStart).locale('ru').format('D MMM, YYYY')} {' - '} {dayjs(data?.firstTrimesterEnd).format('D MMM, YYYY')}</span>
+                                        <h3>{t("2nd trimester")}</h3>
+                                        <span className={styles.grayText}>{dayjs(data?.secondTrimesterStart).locale(currentLanguage).format('D MMMM')} {' - '} {dayjs(data?.secondTrimesterEnd).format('D MMMM')}</span>
                                     </div>
                                     <div className={styles.line}></div>
                                 </div>
                                 <div className={styles.trimesterCard}>
                                     <div className={styles.trimesterText}>
-                                        <h3>{t("1st trimester")}</h3>
-                                        <span className={styles.grayText}>{dayjs(data?.firstTrimesterStart).locale('ru').format('D MMM, YYYY')} {' - '} {dayjs(data?.firstTrimesterEnd).format('D MMM, YYYY')}</span>
+                                        <h3>{t("3rd trimester")}</h3>
+                                        <span className={styles.grayText}>{dayjs(data?.thirdTrimesterStart).locale(currentLanguage).format('D MMMM')} {' - '} {dayjs(data?.thirdTrimesterEnd).format('D MMMM')}</span>
                                     </div>
                                     <div className={styles.line}></div>
                                 </div>
                             </div>
                         </div>
                         <div className={` ${styles.resultContainer} ${styles.weekContainer}`}>
-                            <span>Вы сейчас на {data?.pregWeeks} неделе 😊</span>
+                            <span>{t("You are")} {data?.pregWeeks} {t("weeks pregnant")} 😊</span>
                         </div>
                     </div>
                 </div>
