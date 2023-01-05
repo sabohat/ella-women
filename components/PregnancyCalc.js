@@ -78,7 +78,7 @@ export default function PregnancyCalc() {
             <div className={styles.hero}>
                 <div className='wrapper'>
                     <div className={styles.content}>
-                        <div classname={styles.titleWrapper}>
+                        <div className={styles.titleWrapper}>
                             <h2 className='section-title'>{t("Pregnancy calculator: ")}</h2>
                             <h2 className='section-title'>{t("Calculate when you will meet your baby")}</h2>
                         </div>
@@ -105,7 +105,7 @@ export default function PregnancyCalc() {
             {isCalculated && !isLoading && <div className={styles.body}>
                 <div className='wrapper'>
                     <div className={styles.content}>
-                        <div classname={styles.titleWrapper}>
+                        <div className={styles.titleWrapper}>
                             <h2 className='section-title'>{t("Result")}</h2>
                         </div>
                         <div className={styles.resultContainer}>
