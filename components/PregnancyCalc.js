@@ -126,21 +126,21 @@ export default function PregnancyCalc() {
                                 <div className={styles.trimesterCard}>
                                     <div className={styles.trimesterText}>
                                         <h3>{t("1st trimester")}</h3>
-                                        <span className={styles.grayText}>{dayjs(data?.firstTrimesterStart).locale(currentLanguage).format('D MMMM')} {' - '} {dayjs(data?.firstTrimesterEnd).format('D MMMM')}</span>
+                                        <span className={styles.grayText}>{dayjs(data?.firstTrimesterStart).locale(currentLanguage).format('D MMMM')} {' - '} {dayjs(data?.firstTrimesterEnd).locale(currentLanguage).format('D MMMM')}</span>
                                     </div>
                                     <div className={styles.line}></div>
                                 </div>
                                 <div className={styles.trimesterCard}>
                                     <div className={styles.trimesterText}>
                                         <h3>{t("2nd trimester")}</h3>
-                                        <span className={styles.grayText}>{dayjs(data?.secondTrimesterStart).locale(currentLanguage).format('D MMMM')} {' - '} {dayjs(data?.secondTrimesterEnd).format('D MMMM')}</span>
+                                        <span className={styles.grayText}>{dayjs(data?.secondTrimesterStart).locale(currentLanguage).format('D MMMM')} {' - '} {dayjs(data?.secondTrimesterEnd).locale(currentLanguage).format('D MMMM')}</span>
                                     </div>
                                     <div className={styles.line}></div>
                                 </div>
                                 <div className={styles.trimesterCard}>
                                     <div className={styles.trimesterText}>
                                         <h3>{t("3rd trimester")}</h3>
-                                        <span className={styles.grayText}>{dayjs(data?.thirdTrimesterStart).locale(currentLanguage).format('D MMMM')} {' - '} {dayjs(data?.thirdTrimesterEnd).format('D MMMM')}</span>
+                                        <span className={styles.grayText}>{dayjs(data?.thirdTrimesterStart).locale(currentLanguage).format('D MMMM')} {' - '} {dayjs(data?.thirdTrimesterEnd).locale(currentLanguage).format('D MMMM')}</span>
                                     </div>
                                     <div className={styles.line}></div>
                                 </div>
