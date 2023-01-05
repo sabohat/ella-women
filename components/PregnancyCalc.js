@@ -37,10 +37,10 @@ export default function PregnancyCalc() {
 
         // subtract 3 months add 1 year and 7 days
         const birthDate = dayjs(givenDate).subtract(3, 'month').add(1, 'year').add(7, 'day')
-        console.log(date)
+        console.log(date, givenDate)
 
         // find difference in weeks: which week is she now?
-        const pregWeeks = now.diff(givenDate, 'days');
+        const pregWeeks = now.diff(givenDate, 'weeks');
 
         // divide into trimesters
 
