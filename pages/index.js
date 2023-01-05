@@ -8,13 +8,15 @@ import Header from '../components/Header'
 import ServiceCard from '../components/ServiceSection'
 import styles from '../styles/Home.module.css'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import PregnancyCalc from '../components/PregnancyCalc'
 
 export default function Home() {
   return (
     <>
-      <AboutUsHero />
+      {/* <AboutUsHero />
       <ServiceCard />
-      <ArticleSection />
+      <ArticleSection /> */}
+      <PregnancyCalc />
     </>
   )
 }
