@@ -67,6 +67,17 @@ a {
   letter-spacing: 0.41px;
 
   color: #000000;
+  @media (max-width: 768px) {
+    font-size: 22px;
+    line-height: 24px;
+    font-weight: 600;
+  }
+}
+
+.mobile-hidden{
+  @media (max-width: 768px) {
+    display: none
+  }
 }
 
 .wrapper {

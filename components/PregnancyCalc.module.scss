@@ -36,10 +36,19 @@
 .inputs {
   display: flex;
   justify-content: space-between;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .input {
   width: 48%;
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-top: 16px;
+  }
 }
 
 .button {
@@ -104,6 +113,10 @@
   text-align: center;
 
   color: #000000;
+  @media (max-width: 768px) {
+    font-size: 20px;
+    padding: 0 16px;
+  }
 }
 
 .resultText {
@@ -116,6 +129,9 @@
 
   /* Main */
   color: #7165e5;
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
 }
 .bottomText {
   font-style: normal;
@@ -126,6 +142,9 @@
 
   /* Dark Gray/Dark Gray 5 */
   color: #48535b;
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
 }
 
 .trimester {

@@ -80,7 +80,7 @@ export default function PregnancyCalc() {
                     <div className={styles.content}>
                         <div className={styles.titleWrapper}>
                             <h2 className='section-title'>{t("Pregnancy calculator: ")}</h2>
-                            <h2 className='section-title'>{t("Calculate when you will meet your baby")}</h2>
+                            <h2 className='section-title mobile-hidden'>{t("Calculate when you will meet your baby")}</h2>
                         </div>
                         <div className={styles.calcWrapper}>
                             <div className={styles.inputs}>
