@@ -28,9 +28,9 @@ export default function PregnancyCalc() {
         if (!date) {
             return setIsLoading(false)
         }
-        
+
         setIsLoading(true)
-        
+        setCalculated(false)
 
         const givenDate = dayjs(date)
         const now = dayjs()
@@ -69,9 +69,21 @@ export default function PregnancyCalc() {
             thirdTrimesterEnd: thirdTrimesterEnd
         })
 
-        setCalculated(true)
-        setIsLoading(false)
+        // setCalculated(true)
+        // setIsLoading(false)
     }
+
+    useEffect(() => {
+        let timer
+
+        if (isLoading) {
+            timer = setTimeout(() => {
+                setIsLoading(false)
+                setCalculated(true)
+            }, 1000)
+        }
+
+    }, [isLoading])
 
     return (
         <>
@@ -82,77 +94,75 @@ export default function PregnancyCalc() {
                             <h2 className='section-title'>{t("Pregnancy calculator: ")}</h2>
                             <h2 className='section-title mobile-hidden'>{t("Calculate when you will meet your baby")}</h2>
                         </div>
-                        <div className={styles.calcWrapper}>
-                            <div className={styles.inputs}>
-                                <div className={styles.input}>
-                                    <MuiDatePicker value={date} setValue={setDate} label={t("First day of the last cycle")} />
-                                </div>
-                                <div className={styles.input}>
+                        {isLoading ?
+                            <MuiProgress />
+
+                            :
+                            !isCalculated ?
+                                <div className={styles.calcWrapper}>
+                                    <div className={styles.inputs}>
+                                        <div className={styles.input}>
+                                            <MuiDatePicker value={date} setValue={setDate} label={t("First day of the last cycle")} />
+                                        </div>
+                                        {/* <div className={styles.input}>
                                     <MuiTextFields label={t("Average cycle length")} />
-                                </div>
-                            </div>
-                            <div className={styles.button}>
-                                <MuiButton label={t("Show result")} onClick={() => calculate()} />
+                                </div> */}
+                                    </div>
+                                    <div className={styles.button}>
+                                        <MuiButton label={t("Show result")} onClick={() => calculate()} />
 
-                            </div>
-                        </div>
+                                    </div>
+                                </div>
+                                : <>
+                                    <div className={styles.resultContainer}>
+                                        <div className={styles.resultCard}>
+                                            <div className={styles.fireworkBottom}>
+                                                <FireWorkBottom />
+                                            </div>
+                                            <div className={styles.fireworkTop}>
+                                                <FireWorkTop />
+                                            </div>
+
+
+                                            <p className={styles.boldText}>{t("You will meet your baby at")}</p>
+                                            <h2 className={styles.resultText}>{dayjs(data?.birthDate).locale(currentLanguage).format('D MMMM, YYYY')}</h2>
+                                            <span className={styles.bottomText}>{dayjs(data?.birthDate).locale(currentLanguage).format('dddd')}</span>
+                                        </div>
+                                        <div className={styles.trimester}>
+                                            <div className={styles.trimesterCard}>
+                                                <div className={styles.trimesterText}>
+                                                    <h3>{t("1st trimester")}</h3>
+                                                    <span className={styles.grayText}>{dayjs(data?.firstTrimesterStart).locale(currentLanguage).format('D MMMM')} {' - '} {dayjs(data?.firstTrimesterEnd).locale(currentLanguage).format('D MMMM')}</span>
+                                                </div>
+                                                <div className={styles.line}></div>
+                                            </div>
+                                            <div className={styles.trimesterCard}>
+                                                <div className={styles.trimesterText}>
+                                                    <h3>{t("2nd trimester")}</h3>
+                                                    <span className={styles.grayText}>{dayjs(data?.secondTrimesterStart).locale(currentLanguage).format('D MMMM')} {' - '} {dayjs(data?.secondTrimesterEnd).locale(currentLanguage).format('D MMMM')}</span>
+                                                </div>
+                                                <div className={styles.line}></div>
+                                            </div>
+                                            <div className={styles.trimesterCard}>
+                                                <div className={styles.trimesterText}>
+                                                    <h3>{t("3rd trimester")}</h3>
+                                                    <span className={styles.grayText}>{dayjs(data?.thirdTrimesterStart).locale(currentLanguage).format('D MMMM')} {' - '} {dayjs(data?.thirdTrimesterEnd).locale(currentLanguage).format('D MMMM')}</span>
+                                                </div>
+                                                <div className={styles.line}></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className={` ${styles.resultContainer} ${styles.weekContainer}`}>
+                                        <span>{t("You are")} {data?.pregWeeks} {t("weeks pregnant")} 😊</span>
+                                    </div>
+                                    <div className={` ${styles.button}`}>
+                                        <MuiButton label={t("Recalculate")} onClick={() => setCalculated(false)} />
+                                    </div>
+                                </>
+                        }
                     </div>
                 </div>
             </div>
-
-            {isLoading && <MuiProgress />}
-
-            {isCalculated && !isLoading && <div className={styles.body}>
-                <div className='wrapper'>
-                    <div className={styles.content}>
-                        <div className={styles.titleWrapper}>
-                            <h2 className='section-title'>{t("Result")}</h2>
-                        </div>
-                        <div className={styles.resultContainer}>
-                            <div className={styles.resultCard}>
-                                <div className={styles.fireworkBottom}>
-                                    <FireWorkBottom />
-                                </div>
-                                <div className={styles.fireworkTop}>
-                                    <FireWorkTop />
-                                </div>
-
-
-                                <p className={styles.boldText}>{t("You will meet your baby at")}</p>
-                                <h2 className={styles.resultText}>{dayjs(data?.birthDate).locale(currentLanguage).format('D MMMM, YYYY')}</h2>
-                                <span className={styles.bottomText}>{dayjs(data?.birthDate).locale(currentLanguage).format('dddd')}</span>
-                            </div>
-                            <div className={styles.trimester}>
-                                <div className={styles.trimesterCard}>
-                                    <div className={styles.trimesterText}>
-                                        <h3>{t("1st trimester")}</h3>
-                                        <span className={styles.grayText}>{dayjs(data?.firstTrimesterStart).locale(currentLanguage).format('D MMMM')} {' - '} {dayjs(data?.firstTrimesterEnd).locale(currentLanguage).format('D MMMM')}</span>
-                                    </div>
-                                    <div className={styles.line}></div>
-                                </div>
-                                <div className={styles.trimesterCard}>
-                                    <div className={styles.trimesterText}>
-                                        <h3>{t("2nd trimester")}</h3>
-                                        <span className={styles.grayText}>{dayjs(data?.secondTrimesterStart).locale(currentLanguage).format('D MMMM')} {' - '} {dayjs(data?.secondTrimesterEnd).locale(currentLanguage).format('D MMMM')}</span>
-                                    </div>
-                                    <div className={styles.line}></div>
-                                </div>
-                                <div className={styles.trimesterCard}>
-                                    <div className={styles.trimesterText}>
-                                        <h3>{t("3rd trimester")}</h3>
-                                        <span className={styles.grayText}>{dayjs(data?.thirdTrimesterStart).locale(currentLanguage).format('D MMMM')} {' - '} {dayjs(data?.thirdTrimesterEnd).locale(currentLanguage).format('D MMMM')}</span>
-                                    </div>
-                                    <div className={styles.line}></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className={` ${styles.resultContainer} ${styles.weekContainer}`}>
-                            <span>{t("You are")} {data?.pregWeeks} {t("weeks pregnant")} 😊</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            }
 
         </>
     )
