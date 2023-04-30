@@ -24,11 +24,17 @@ const headerLinks = [
         label: "calculators",
         id: 2
     },
+    {
+        link: "/baby-names",
+        label: "baby_names",
+        id: 3
+    }
     // {
     //     link: "/about-us",
     //     label: "about_us",
-    //     id: 3
+    //     id: 4
     // }
+    
 ]
 export default function Header () {
     const { t } = useTranslation('common');
