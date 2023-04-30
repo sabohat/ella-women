@@ -1,13 +1,15 @@
+import { useTranslation } from 'next-i18next';
 import React from 'react'
 import styles from "./BabyNamesSection.module.scss";
 
 export default function BabyNamesSection () {
+    const { t } = useTranslation()
     return (
         <div className="wrapper article-section">
-            <div className={styles.title}><span>Top 10 Ismlar Ro'yxati</span></div>
+            <div className={styles.title}><span>{t("top_10_names")}</span></div>
             <div className={styles.flex}>
                 <div className={styles.box}>
-                    <div className={styles.subtitle}>Bolalar Ismlari</div>
+                    <div className={styles.subtitle}>{t("boy_names")}</div>
                     <ol>
                         <li>Jabroil</li>
                         <li>Muhammad</li>
@@ -23,7 +25,7 @@ export default function BabyNamesSection () {
                 </div>
 
                 <div className={styles.box}>
-                    <div className={styles.subtitle}>Qizlar Ismlari</div>
+                    <div className={styles.subtitle}>{t("girl_names")}</div>
                     <ol>
                         <li>Sa'diya</li>
                         <li>Sumayya</li>

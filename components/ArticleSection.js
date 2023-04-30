@@ -14,7 +14,7 @@ export default function ArticleSection () {
     {
       title: "7-hafta: homiladorlik belgilari va bolaning rivojlanishi",
       subtitle:
-        "Tanangizda 7 hafta oldingiga qaraganda ko'proq qon aylanmoqda. Qo'shimcha qon sizning bachadoningizni chaqaloq uchun zarur bo'lgan...",
+        "Tanangizda 7 hafta oldingiga qaraganda ko'proq qon aylanmoqda. Qo'shimcha qon sizning bachadoningizni chaqaloq uchun ...",
       img: articleImg1,
       date: "08.12.2022",
       link: "https://telegra.ph/7-hafta-homiladorlik-belgilari-va-bolaning-rivojlanishi-12-08"

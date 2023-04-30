@@ -9,6 +9,7 @@
       }
 }
 .title {
+    text-transform: capitalize;
 font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
@@ -28,6 +29,8 @@ font-family: "Montserrat";
 }
 
 .subtitle {
+    text-transform: capitalize;
+
     font-size: 20px;
     font-family: 'SF Pro Display';
     color: blueviolet
