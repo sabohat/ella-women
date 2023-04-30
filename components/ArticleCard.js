@@ -4,11 +4,11 @@ import Image from "next/image";
 import styles from "./ArticleCard.module.scss";
 import { Calendar } from "./svg";
 
-export default function ArticleCard({ data }) {
+export default function ArticleCard ({ data }) {
   return (
-    <div className={styles.card}>
+    <a href={data?.link} className={styles.card}>
       <Image
-      className={styles.cardImage}
+        className={styles.cardImage}
         src={data?.img}
         alt={data?.title}
         width={343}
@@ -19,6 +19,6 @@ export default function ArticleCard({ data }) {
       </div>
       <h3 className={styles.cardTitle}>{data.title}</h3>
       <p className={styles.cardSubtitle}>{data.subtitle}</p>
-    </div>
+    </a>
   );
 }

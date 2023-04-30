@@ -7,28 +7,31 @@ import articleImg2 from "../assets/img/article-card-2.png";
 import articleImg3 from "../assets/img/article-card-3.png";
 
 
-export default function ArticleSection() {
+export default function ArticleSection () {
   const cardList = [
     {
-      title: "Общенациональный проект «Зеленое пространство»",
+      title: "7-hafta: homiladorlik belgilari va bolaning rivojlanishi",
       subtitle:
-        "Частичная или полная потеря слуха лишает детей важного источника информации и ...",
+        "Tanangizda 7 hafta oldingiga qaraganda ko'proq qon aylanmoqda. Qo'shimcha qon sizning bachadoningizni chaqaloq uchun zarur bo'lgan...",
       img: articleImg1,
-      date: "06.09.2022",
+      date: "08.12.2022",
+      link: "https://telegra.ph/7-hafta-homiladorlik-belgilari-va-bolaning-rivojlanishi-12-08"
     },
     {
-      title: "Общенациональный проект «Зеленое пространство»",
+      title: "Homiladorlikning ilk belgilari",
       subtitle:
-        "Частичная или полная потеря слуха лишает детей важного источника информации и ...",
-      img:  articleImg2,
-      date: "06.09.2022",
+        "Siz homilador ekanligingizni qanday aniqlashni bilmayapsizmi?! Albatta, homiladorlik testi sizga aniq javobni ayta oladi. Biroq...",
+      img: articleImg2,
+      date: "07.08.2022",
+      link: "https://telegra.ph/Homiladorlikning-ilk-belgilari-08-07"
     },
     {
-      title: "Общенациональный проект «Зеленое пространство»",
+      title: "Egizak homiladorlik belgi va alomatlari",
       subtitle:
-        "Частичная или полная потеря слуха лишает детей важного источника информации и ...",
+        "Ikki karra homilador bo’lishdek narsa bormikan? Homiladorlik alomatlarini boshdan kechirishni boshlaganingizda...",
       img: articleImg3,
-      date: "06.09.2022",
+      date: "14.08.2022",
+      link: "https://telegra.ph/Egizak-homiladorlik-belgi-va-alomatlari-08-14"
     },
   ];
   return (

@@ -39,11 +39,11 @@ export default function Header() {
                     <LogoIcon />
                 </div>
                 <div className={styles.menu}>
-                    {/* <ul className={styles.list}>
+                    <ul className={styles.list}>
                         {headerLinks.map((item) => (
                             <li key={item.id} className={styles.link}><Link href={item.link}>{t(item.label)}</Link></li>
                         ))}
-                    </ul> */}
+                    </ul>
                     <LanguageMenu />
                 </div>
             </div>

@@ -7,15 +7,15 @@ import { useTranslation } from 'next-i18next';
 
 
 
-export default function AboutUsHero() {
-    const {t} = useTranslation('common')
+export default function AboutUsHero () {
+    const { t } = useTranslation('common')
     return (
         <div className={`${styles.hero}`}>
             <div className="wrapper">
                 <div className={styles.row}>
                     <div className={styles.heroLeft}>
                         <h3 className="hero-title">{t('hero_title')}</h3>
-                        <p className="hero-subtitle">Lorem ipsum doro sitamet</p>
+                        {/* <p className="hero-subtitle">Lorem ipsum doro sitamet</p> */}
                         <a href="https://www.apple.com/uz/app-store/" className={styles.icon}><AppStoreDownloadIcon /></a>
                         <a href="https://www.google.com/"><GooglePlayDownloadIcon /></a>
                     </div>

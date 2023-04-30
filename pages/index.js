@@ -13,10 +13,10 @@ import PregnancyCalc from '../components/PregnancyCalc'
 export default function Home() {
   return (
     <>
-      {/* <AboutUsHero />
+      <AboutUsHero />
       <ServiceCard />
-      <ArticleSection /> */}
-      <PregnancyCalc />
+      <ArticleSection />
+      {/* <PregnancyCalc /> */}
     </>
   )
 }
