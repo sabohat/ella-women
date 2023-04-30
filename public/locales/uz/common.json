@@ -3,7 +3,7 @@
   "products": "mahsulotlar",
   "calculators": "kalkulyatorlar",
   "about_us": "biz haqimizda",
-  "hero_title": "Davrlar va tsikllarni kuzatish uchun birinchi raqamli ilova",
+  "hero_title": "Homiladorlikni kuzatish uchun birinchi raqamli ilova",
   "service_section_title": "Ladycare qanday xizmatlarni taqdim etadi?",
   "serviceCardTitle1": "Hayz siklini kuzatish",
   "serviceCardSubtitle1": "O'z tsiklingizni biling va o'zingizni yaxshi his qiling",
@@ -22,5 +22,7 @@
   "Pregnancy calculator: ": "Homiladorlik kalkulyatori: ",
   "1st trimester": "1-trimester",
   "2nd trimester": "2-trimester",
-  "3rd trimester": "3-trimester"
+  "3rd trimester": "3-trimester",
+  "interesting_articles": "Qiziqarli maqolalar"
+
 }

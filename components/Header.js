@@ -24,13 +24,13 @@ const headerLinks = [
         label: "calculators",
         id: 2
     },
-    {
-        link: "/about-us",
-        label: "about_us",
-        id: 3
-    }
+    // {
+    //     link: "/about-us",
+    //     label: "about_us",
+    //     id: 3
+    // }
 ]
-export default function Header() {
+export default function Header () {
     const { t } = useTranslation('common');
     return (
         <div className='wrapper'>

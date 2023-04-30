@@ -1,17 +1,12 @@
-import Link from 'next/link'
 import React from 'react'
-import PregnancyCalc from '../../components/PregnancyCalc'
-
+import ArticleSection from '../components/ArticleSection'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
-export default function CalculatorsPage () {
+export default function articles () {
     return (
-        <div>
-            <PregnancyCalc />
-        </div>
+        <ArticleSection />
     )
 }
-
 
 // copy this to support translations
 export const getServerSideProps = async ({ locale }) => ({

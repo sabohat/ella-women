@@ -16,8 +16,7 @@ export default function AboutUsHero () {
                     <div className={styles.heroLeft}>
                         <h3 className="hero-title">{t('hero_title')}</h3>
                         {/* <p className="hero-subtitle">Lorem ipsum doro sitamet</p> */}
-                        <a href="https://www.apple.com/uz/app-store/" className={styles.icon}><AppStoreDownloadIcon /></a>
-                        <a href="https://www.google.com/"><GooglePlayDownloadIcon /></a>
+                        <a href="https://t.me/ellauz_bot" className={styles.icon}>Telegram Bot</a>
                     </div>
                     <div className={styles.heroRight}>
                         <Image src={image} width={550} height={480} />

@@ -40,7 +40,13 @@
 }
 
 .icon {
-  margin-right: 16px;
+  background: white;
+  padding: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  & :hover {
+background: #8f84f9;
+  }
 }
 
 .heroRight {
