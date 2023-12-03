@@ -1,8 +1,9 @@
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
 import Link from 'next/link'
 import React from 'react'
 import PregnancyCalc from '../../components/PregnancyCalc'
 
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 export default function CalculatorsPage () {
     return (

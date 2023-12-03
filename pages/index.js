@@ -10,12 +10,13 @@ import styles from '../styles/Home.module.css'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import PregnancyCalc from '../components/PregnancyCalc'
 
-export default function Home() {
+export default function Home () {
   return (
     <>
-      <AboutUsHero />
+      <PregnancyCalc />
+      {/* <AboutUsHero />
       <ServiceCard />
-      <ArticleSection />
+      <ArticleSection /> */}
       {/* <PregnancyCalc /> */}
     </>
   )
