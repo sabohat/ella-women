@@ -9,7 +9,7 @@ import MuiButton from './common/Button';
 import MuiDatePicker from './common/MuiDatePicker';
 import MuiProgress from './common/MuiProgress';
 import styles from "./PregnancyCalc.module.scss";
-import { FireWorkBottom, FireWorkTop } from './svg';
+import { FireWorkBottom, FireWorkTop, NewBornAndMum } from './svg';
 
 
 export default function PregnancyCalc () {
@@ -20,7 +20,7 @@ export default function PregnancyCalc () {
     const [date, setDate] = useState(null)
 
     const [isLoading, setIsLoading] = useState(false)
-    const [isCalculated, setCalculated] = useState(false)
+    const [isCalculated, setCalculated] = useState(true)
     const [data, setData] = useState({})
 
     const calculate = () => {
@@ -100,7 +100,11 @@ export default function PregnancyCalc () {
                                 <div className={styles.calcWrapper}>
                                     <div className={styles.inputs}>
                                         <div className={styles.input}>
-                                            <MuiDatePicker value={date} setValue={setDate} label={t("First day of the last cycle")} />
+                                            <MuiDatePicker
+                                                value={date}
+                                                setValue={setDate}
+                                                label={t("First day of the last cycle")}
+                                            />
                                         </div>
                                     </div>
                                     <div className={styles.button}>
@@ -120,6 +124,9 @@ export default function PregnancyCalc () {
 
 
                                             <p className={styles.boldText}>{t("You will meet your baby at")}</p>
+                                            <div className={styles.babyNmom}>
+                                                <NewBornAndMum />
+                                            </div>
                                             <h2 className={styles.resultText}>{dayjs(data?.birthDate).locale(currentLanguage).format('D MMMM, YYYY')}</h2>
                                             <span className={styles.bottomText}>{dayjs(data?.birthDate).locale(currentLanguage).format('dddd')}</span>
                                         </div>
@@ -151,7 +158,7 @@ export default function PregnancyCalc () {
                                         <span>{t("You are")} {data?.pregWeeks} {t("weeks pregnant")} 😊</span>
                                     </div>
                                     <div className={` ${styles.button}`}>
-                                        <MuiButton label={t("Recalculate")} onClick={() => setCalculated(false)} />
+                                        <MuiButton label="Qayta hisoblash" onClick={() => setCalculated(false)} />
                                     </div>
                                 </>
                         }

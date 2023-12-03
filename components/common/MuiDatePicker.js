@@ -8,7 +8,7 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { MobileDatePicker } from '@mui/x-date-pickers/MobileDatePicker';
 import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
 
-export default function MuiDatePickers({ label = "", value, setValue = () => { } }) {
+export default function MuiDatePickers ({ label = "", value, setValue = () => { } }) {
     return (
         <LocalizationProvider dateAdapter={AdapterDayjs}>
             <Stack spacing={3}>
@@ -38,7 +38,14 @@ export default function MuiDatePickers({ label = "", value, setValue = () => { }
                     onChange={(newValue) => {
                         setValue(newValue);
                     }}
-                    renderInput={(params) => <TextField {...params} />}
+                    renderInput={(params) => <TextField
+                        {...params}
+                        inputProps={
+                            {
+                                ...params.inputProps,
+                                placeholder: "kun/oy/yil"
+                            }
+                        } />}
                 />
             </Stack>
         </LocalizationProvider>

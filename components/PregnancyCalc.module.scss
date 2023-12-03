@@ -210,3 +210,12 @@
   align-items: center;
   justify-content: center;
 }
+
+
+.babyNmom {
+  width: 30%;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
