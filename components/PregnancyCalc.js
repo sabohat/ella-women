@@ -20,7 +20,7 @@ export default function PregnancyCalc () {
     const [date, setDate] = useState(null)
 
     const [isLoading, setIsLoading] = useState(false)
-    const [isCalculated, setCalculated] = useState(true)
+    const [isCalculated, setCalculated] = useState(false)
     const [data, setData] = useState({})
 
     const calculate = () => {
