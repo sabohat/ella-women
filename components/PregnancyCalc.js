@@ -10,6 +10,7 @@ import MuiDatePicker from './common/MuiDatePicker';
 import MuiProgress from './common/MuiProgress';
 import styles from "./PregnancyCalc.module.scss";
 import { FireWorkBottom, FireWorkTop, NewBornAndMum } from './svg';
+import LanguageMenu from './LanguageMenu';
 
 
 export default function PregnancyCalc () {
@@ -85,8 +86,14 @@ export default function PregnancyCalc () {
 
     return (
         <>
+
+            <div
+                className={styles.button}>
+                <a href="https://t.me/my_ella"> <MuiButton label={t('join_channel')}></MuiButton></a></div>
             <div className={styles.hero}>
                 <div className='wrapper'>
+                    <LanguageMenu />
+
                     <div className={styles.content}>
                         <div className={styles.titleWrapper}>
                             <h2 className='section-title'>{t("Pregnancy calculator: ")}</h2>
@@ -165,6 +172,9 @@ export default function PregnancyCalc () {
                     </div>
                 </div>
             </div>
+            <div
+                className={styles.button}>
+                <a href="https://t.me/my_ella"> <MuiButton label={t('join_channel')}></MuiButton></a></div>
 
         </>
     )

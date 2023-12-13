@@ -7,8 +7,11 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { MobileDatePicker } from '@mui/x-date-pickers/MobileDatePicker';
 import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
+import { useTranslation } from 'next-i18next';
 
 export default function MuiDatePickers ({ label = "", value, setValue = () => { } }) {
+    const { t } = useTranslation("common")
+
     return (
         <LocalizationProvider dateAdapter={AdapterDayjs}>
             <Stack spacing={3}>
@@ -43,7 +46,7 @@ export default function MuiDatePickers ({ label = "", value, setValue = () => { 
                         inputProps={
                             {
                                 ...params.inputProps,
-                                placeholder: "kun/oy/yil"
+                                placeholder: t("kun/oy/yil")
                             }
                         } />}
                 />
